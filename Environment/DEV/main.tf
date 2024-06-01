@@ -5,3 +5,11 @@ module "res_rg"{
     rg_input = var.rg_input
 }
 
+ module "vnet"{
+    source= "../../Modules/azurerm_vnet"
+    name= "vnetnam1"
+    location= "westeurope"
+    resourcegroupname= "akkirg"
+    depends_on = [ module.res_rg ]
+ }
+
