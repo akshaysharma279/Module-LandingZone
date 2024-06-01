@@ -8,7 +8,7 @@ module "res_rg"{
  module "vnet"{
     source= "../../Modules/azurerm_vnet"
     name= "vnetnam12"
-    location= "westeurope"
+    location= "easteurope"
     resourcegroupname= "akkirg"
     depends_on = [ module.res_rg ]
  }
